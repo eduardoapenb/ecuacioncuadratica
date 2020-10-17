@@ -23,10 +23,11 @@ int main (){
 	cout <<  "\t 4 -  SALIR  "<< endl;
 	 cin >> opc;
 
-   /* switch(opc){
+    switch(opc){
 
 		 case 1 :{
             cout<< " " << endl;
+            casoNumero1();
 		 }
 		 break;
 
@@ -62,7 +63,7 @@ int main (){
 			break;
 
 
-		 }*/
+		 }
 
 	system("PAUSE");
 	 return 0;
@@ -77,6 +78,7 @@ void casoNumero1(){
         float bisectriz = 0, raizCuadradaBisectriz = 0;
         float parteReal = 0, parteImaginariaNegativa = 0;
         float parteImaginariaPositiva = 0;
+        float solucionPositiva = 0, solucionNegativa = 0;
 
 
             cout <<  "Ingrese el valor de A : "; cin >> a;
@@ -98,20 +100,20 @@ void casoNumero1(){
 			    parteImaginariaPositiva =  (raizCuadradaBisectriz) / (2 * a );
 			    parteImaginariaNegativa = (- 1 * (raizCuadradaBisectriz / (2 * a )));
 
-			    cout << "X es igual a "<<endl;
-			    cout << "x1 = " << p << " + " <<i<<"i"<< endl;
-			    cout << "x2 = " << p <<" "<<in<<"i"<< endl;
+			    cout << "Las soluciones son: "<<endl;
+			    cout << "x1 = " << parteReal << " + " << parteImaginariaPositiva <<"i"<< endl;
+			    cout << "x2 = " << parteReal <<" "<<parteImaginariaNegativa <<"i"<< endl;
 
 
 			} else {
 
-				e = sqrt (v);
-				p = ((-1 * b)/ (2 * a) );
-			    i =  p +((e) / (2 * a ));
-			    in = p +((- 1 * (e / (2 * a ))));
-			    cout << "X es igual a "<<endl;
-			    cout << "x1 = " <<  i << endl;
-			    cout << "x2 = " <<  in << endl;
+				raizCuadradaBisectriz = sqrt (bisectriz);
+				parteReal = ((-1 * b)/ (2 * a) );
+                solucionPositiva =  parteReal + ((raizCuadradaBisectriz) / (2 * a ));
+			    solucionNegativa =  parteReal + ((- 1 * (raizCuadradaBisectriz / (2 * a ))));
+			    cout << "Las soluciones son: "<<endl;
+			    cout << "x1 = " <<  solucionPositiva << endl;
+			    cout << "x2 = " <<  solucionNegativa << endl;
 
 
 			}
